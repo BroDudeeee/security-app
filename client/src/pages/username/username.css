@@ -1,0 +1,52 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  border: 5px solid rgb(231, 230, 230);
+}
+
+.hello-h1 {
+  font-size: 40px;
+  font-family: "Lexend Peta", sans-serif;
+}
+
+.hello-span {
+  width: 200px;
+  margin: 0 auto;
+  font-family: "Lexend Peta", sans-serif;
+}
+
+.submit-btn {
+  padding: 15px;
+  font-size: larger;
+  background-color: rgb(75, 75, 250);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-family: "Lexend Peta", sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: rgb(240, 86, 86);
+}
+
+.user-input {
+  padding: 15px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0 20px 0;
+  font-size: large;
+}
+
+.user-input:focus {
+  outline: 2px solid lightgray;
+}
