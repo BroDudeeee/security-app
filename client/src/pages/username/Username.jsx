@@ -3,14 +3,14 @@ import "./username.css";
 import avatar from "../../assets/avatar.png";
 import { useFormik } from "formik";
 import { Toaster } from "react-hot-toast";
-import { userValidator } from "../../middleware/UserValidator";
+import { usernameValidator } from "../../middleware/UserValidator";
 
 const Username = () => {
   const formik = useFormik({
     initialValues: {
       username: "",
     },
-    validate: userValidator,
+    validate: usernameValidator,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: (values) => console.log(values),

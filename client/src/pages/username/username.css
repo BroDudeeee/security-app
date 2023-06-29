@@ -2,9 +2,10 @@
   width: 100px;
   height: 100px;
   margin: 20px auto;
-  border: 5px solid white;
+  border: 5px solid lightgray;
   border-radius: 50%;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .avatar:hover {
