@@ -1,19 +1,35 @@
 import { Link } from "react-router-dom";
 import "./username.css";
 import avatar from "../../assets/avatar.png";
+import { useFormik } from "formik";
+import { Toaster } from "react-hot-toast";
+import { userValidator } from "../../middleware/UserValidator";
 
 const Username = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+    },
+    validate: userValidator,
+    validateOnBlur: false,
+    validateOnChange: false,
+    onSubmit: (values) => console.log(values),
+  });
+
   return (
     <section className="container">
+      <Toaster position="top-center" reverseOrder={false} />
       <section className="card">
         <h1 className="hello-h1">Hello Again!</h1>
         <span className="hello-span">Explore More by connecting with us</span>
         <img className="avatar" src={avatar} alt="avatar" />
-        <form className="form" onSubmit={handleSubmit}>
-          <input className="user-input" type="text" placeholder="Username" />
+        <form className="form" onSubmit={formik.handleSubmit}>
+          <input
+            {...formik.getFieldProps("username")}
+            className="user-input"
+            type="text"
+            placeholder="Username"
+          />
           <button type="submit" className="submit-btn">
             Let&apos;s Go
           </button>
