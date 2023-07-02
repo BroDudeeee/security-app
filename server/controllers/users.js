@@ -3,6 +3,7 @@ import User from "../models/User.js";
 const getUser = async (req, res) => {
   try {
     const user = await User.findOne({ username: req.params.username });
+    if (!user) return res.status(404).json("No User Found!!");
     const { password, ...rest } = user._doc;
     res.status(200).json(rest);
   } catch (error) {

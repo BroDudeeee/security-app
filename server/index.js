@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRouter from "./routes/auth.js";
 import usersRouter from "./routes/users.js";
+import otpRouter from "./routes/otp.js";
 import connectDB from "./database/connectDB.js";
 
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(cors());
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/otp", otpRouter);
 
 const start = () => {
   try {
